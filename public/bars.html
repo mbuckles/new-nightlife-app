@@ -1,0 +1,37 @@
+<div class="container-fluid navbar">
+  <h1>Where do you want to go tonight?</h1>
+    <h6>Powered by Yelp Fusion</h6>
+  <a href="/login" class="btn btn-success" role="button">Login</a> <a href="/register" class="btn btn-success" role="button">Sign Up</a> <a href="/profile" class="btn btn-success" role="button">Profile</a>
+</div>
+<div class="container search">
+  <div class="search1"><input type="text" ng-model="vm.location.city"   placeholder="City" class="form-control barcity"></div><div class="search2"><input type="text" ng-model="vm.location.state"   placeholder="State" class="form-control barstate"></div>
+  <div class="searchbtn"><button class="btn btn-success" ng-click="vm.bars()" ng-disabled="!vm.location.city || !vm.location.state">Search</button></div>
+</div>
+<hr>
+<div class=" container-fluid barlist-main">
+
+  <div class="barlist-body">
+
+    <div class="barlist-list">
+      <ul class="list-group">
+             <li class="list-group-item" ng-repeat="bar in bars">
+               <address>
+                <strong>{{bar.name}}</strong>
+                <br>
+                <strong>{{bar.location}}</strong>
+                <br>
+                 <strong><abbr title="Phone">P:</abbr> {{bar.display_phone}}</strong>
+                  <br>
+                <strong>Yelp Rating - {{bar.yelp_rating}}  (Review Count - {{bar.review_count}})</strong>
+                  <br>
+                  <strong>Website: <a href={{bar.url}} target="_blank">{{bar.name}}</a></strong>
+                 <br>
+                 <img src="{{bar.image_url}}" width="172" height="152">
+                </address>
+              </li>
+         </ul>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="search">
+    <h1>Where do you want to go tonight?</h1>
+    <a href="/login" class="btn btn-success" role="button">Login</a>  ||  <a href="/register" class="btn btn-success" role="button">Sign Up</a>  ||  <a href="/profile" class="btn btn-success" role="button">Profile</a>
+    <h6>Powered by Yelp Fusion</h6>
+    <div class="search1"><input type="text" ng-model="vm.location.city"   placeholder="City" class="form-control barcity"></div><div class="search2"><input type="text" ng-model="vm.location.state"   placeholder="State" class="form-control barstate"></div>
+    <div class="searchbtn"><button class="btn btn-success" ng-click="vm.bars()" ng-disabled="!vm.location.city || !vm.location.state">Search</button></div>
+</div>
+<hr>
+<h1>Where do you want to go tonight?</h1>
+<a href="/login">Login</a>  ||  <a href="/register">Sign Up</a>  ||  <a href="/profile">Profile</a>
+<h6>Powered by Yelp Fusion</h6>
+<hr>
+<div class="search">
+  <div class="search1"><input type="text" ng-model="vm.location.city"   placeholder="City" class="form-control barcity"></div><div class="search2"><input type="text" ng-model="vm.location.state"   placeholder="State" class="form-control barstate"></div>
+  <div class="searchbtn"><button class="btn btn-success" ng-click="vm.bars()" ng-disabled="!vm.location.city || !vm.location.state">Search</button></div>
+</div>
+<br>
+<a href="/bars">Bars</a>
+<div class=" container barlist-main">
+  <div class="barlist-body">
+    <div class="barlist-list">
+      <ul class="list-group">
+             <li class="list-group-item" ng-repeat="bar in bars">
+               <address>
+                <strong>{{bar.name}}</strong>
+                <br>
+                {{bar.location}}
+                <br>
+                 <abbr title="Phone">P:</abbr> {{bar.display_phone}}
+                  <br>
+                  Yelp Rating - {{bar.yelp_rating}}  (Review Count - {{bar.review_count}})
+                  <br>
+                  Website: <a href={{bar.url}} target="_blank">{{bar.name}}</a>
+                 <br>
+                 <img src="{{bar.image_url}}" width="162" height="142">
+              </li>
+            </address>
+         </ul>
+       </div>
+    </div>
+</div>

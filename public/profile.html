@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>{{vm.title}}</h1>
+  <hr>
+  <h1>Welcome Back, {{vm.currentUser.name}}</h1>
+  <div class="profile">
+    <a href="/" class="btn btn-success" role="button">Go To Bar List</a>
+    <button class="btn btn-warning" ng-click="vm.logOut()">Logout</button>
+  </div>
+  <hr>
+  <div class="profilelist">
+    <div class="profilelist-body">
+      <li>Name: {{vm.currentUser.name}}</li>
+      <li>City: {{vm.currentUser.city}}</li>
+      <li>State: {{vm.currentUser.state}}</li>
+      <li>ID: {{vm.currentUser._id}}</li>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+{
+  "name": "nightlfe-app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.9.4",
+    "npm": "3.10.10"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-jwt": "^0.1.9",
+    "assert": "^1.4.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongodb": "^2.2.26",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.10.0",
+    "mongoose-type-url": "^1.0.2",
+    "morgan": "^1.8.1",
+    "node-yelp-fusion": "^1.0.4",
+    "yelp-fusion": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "description": "New Nightlife App",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbuckles/new-nightlife-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbuckles/new-nightlife-app/issues"
+  },
+  "homepage": "https://github.com/mbuckles/new-nightlife-app#readme"
+}
